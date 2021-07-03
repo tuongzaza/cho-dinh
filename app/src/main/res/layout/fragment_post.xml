@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/svPost"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/custom_layout"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvProduct"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/etname"
+                        android:textColor="@color/black"
+                        android:background="@drawable/custom_input"
+                        android:padding="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/custom_input"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingRight="1dp"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/tvCate"
+                            android:textColor="@color/black"/>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                android:id="@+id/snCate"
+                                android:paddingRight="20dp"
+                                app:ms_dropdown_max_height="200dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="@string/etDesc"
+                        android:inputType="textMultiLine|text"
+                        android:minLines="3"
+                        android:gravity="top|left"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+
+
+                    <me.tuong.chodinh.main.post.CurrencyEditText
+                        android:id="@+id/etPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="@string/etPrice"
+                        android:inputType="numberDecimal"
+                        android:digits="0123456789"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnAddImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_button"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/btnImages"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvPhotoPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvContact"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingRight="1dp"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvTinh"
+                            android:textColor="@color/black"/>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                android:id="@+id/snProvince"
+                                android:paddingRight="20dp"
+                                app:ms_dropdown_max_height="200dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/custom_input"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:paddingRight="1dp"
+                        android:paddingLeft="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/tvHuyen"
+                            android:textColor="@color/black"/>
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                android:id="@+id/snDistrict"
+                                android:paddingRight="20dp"
+                                app:ms_dropdown_max_height="200dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/etAddress"
+                        android:textColor="@color/black"
+                        android:background="@drawable/custom_input"
+                        android:padding="10dp"/>
+
+                    <EditText
+                        android:id="@+id/etPNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:hint="@string/etPNUmber"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnPostTin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/btnPost"/>
+
+                <Button
+                    android:id="@+id/btnPostTinLoad"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/btnPost"/>
+
+                <Button
+                    android:id="@+id/btnSavePost"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/btnSavePost"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/requestLogin"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvLoginRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loginRegister"
+                android:background="@drawable/custom_layout"
+                android:layout_gravity="center"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#FFBA00"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

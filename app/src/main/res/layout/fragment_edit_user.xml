@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgAvtOld"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cho_tot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgAvt"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:id="@+id/btnSelectImg"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_select_avatar"
+                    app:layout_constraintRight_toRightOf="@+id/imgAvt"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgAvt">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic__mayanh"
+                        android:layout_marginLeft="7dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hovaten"
+                    android:textColor="#202020"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:padding="10dp"
+                    android:hint="@string/hintName"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sodienthoai"
+                    android:textColor="#202020"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etSdt"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:hint="@string/hintName"
+                    android:textColor="#656464"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="#202020"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:padding="10dp"
+                    android:hint="@string/hintEmail"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diachi"
+                    android:textColor="#202020"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:padding="10dp"
+                    android:hint="@string/hintName"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/matkhau"
+                    android:textColor="#202020"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etPass"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:padding="10dp"
+                    android:hint="@string/hintPassword"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btnUpdateUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btnCapnhat"
+                    android:background="@drawable/custom_button"/>
+
+                <com.dd.processbutton.iml.ActionProcessButton
+                    android:id="@+id/btnUpdateProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/btnCapnhat"
+                    app:pb_colorNormal="#FFBA00"
+                    app:pb_colorProgress="#2196F3"
+                    app:pb_colorPressed="#FFBA00"
+                    app:pb_colorComplete="#4CAF50"
+                    app:pb_textProgress="Xin chờ..."
+                    app:pb_textComplete="Cập nhật thành công!"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lll1"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgAvatarr"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/tuong11" />
+                <TextView
+                    android:id="@+id/tvNameShow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="test"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lll2"
+                android:layout_below="@+id/lll1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                android:background="#cacaca" />
+
+            <LinearLayout
+                android:id="@+id/lll3"
+                android:layout_below="@+id/lll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/ic_baseline_star_border_24"
+                        android:text="@string/rating"/>
+
+                    <TextView
+                        android:id="@+id/tvRatingUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/norate"
+                        android:layout_marginLeft="10dp"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:isIndicator="true"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_gravity="center"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                        android:text="@string/datejoin"/>
+
+                    <TextView
+                        android:id="@+id/tvTimeJoin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/norate"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                        app:iconTint="#A8ADB1"
+                        android:text="@string/address"/>
+
+                    <TextView
+                        android:id="@+id/tvAddressUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/norate"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:drawableLeft="@drawable/ic_baseline_sms_24"
+                        app:iconTint="#A8ADB1"
+                        android:text="@string/phanhoichat"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/norate"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lll4"
+                android:layout_below="@+id/lll3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:orientation="horizontal"
+                android:background="#cacaca" />
+
+            <LinearLayout
+                android:id="@+id/lll5"
+                android:layout_below="@+id/lll4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dangban"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvNumPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 tin"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lll6"
+                android:layout_below="@+id/lll5"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="1dp"
+                android:background="#cacaca" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:id="@+id/rcvPostUser"
+                android:layout_below="@+id/lll6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/desktop_background"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitEnd"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvForgotPassword"
+                        android:textColor="#FFBA00"
+                        android:textSize="30sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tvForgotPasswordDesc"
+                        android:textColor="#9B9B9B"
+                        android:textSize="18sp"
+                        android:textStyle="normal"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etSDTRe"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:padding="10dp"
+                    android:digits="0123456789"
+                    android:hint="@string/hintSDT"
+                    android:inputType="phone"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/btnLayMaRe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="12dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/btnXacMinh"
+                    android:textColor="@color/white"
+                    android:background="@drawable/custom_button"/>
+
+                <TextView
+                    android:id="@+id/tvLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:padding="12dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/btnXacMinh"
+                    android:textColor="@color/white"
+                    android:background="@drawable/custom_button"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvGuilaima"/>
+
+                <TextView
+                    android:id="@+id/tvTimeCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etXacMinhRe"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:padding="10dp"
+                android:hint="@string/hintXacMinh"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/etPass1Re"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:padding="10dp"
+                android:hint="@string/hintPasswordRe"
+                android:inputType="textPassword"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/etPass2Re"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:padding="10dp"
+                android:hint="@string/hintPasswordRe2"
+                android:inputType="textPassword"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvNotifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textColor="#F44336"/>
+
+            <Button
+                android:id="@+id/btnReSetPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/custom_button"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:text="@string/resetpass" />
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvHaveAccount"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal"/>
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/login"
+                    android:textColor="#38699F"
+                    android:textSize="15sp"
+                    android:textStyle="normal"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="20dp"/>
+
+    </RelativeLayout>
+
+</layout>
